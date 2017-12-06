@@ -5,7 +5,7 @@ import datastructure.stack.Stack;
 public class EvaluateInfixExpression {
 
 	public static void main(String[] args) throws Exception {
-		String expression = "((4 + 4) * 4) / 2 - 1";
+		String expression = "5+3*4-8";//"((4 + 4) * 4) / 2 - 1";
 		Stack<Integer> operand = new Stack<>();
 		Stack<Character> operator = new Stack<>();
 

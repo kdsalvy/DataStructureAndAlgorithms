@@ -7,7 +7,6 @@ public class MaxElementInStack {
 	static long max = 0;
 
 	public static void main(String[] args) throws Exception {
-		int i = 1000000000;
 		Stack<Long> stack = new Stack<>();
 		stack.push(-2L);
 		stack.push(-5L);

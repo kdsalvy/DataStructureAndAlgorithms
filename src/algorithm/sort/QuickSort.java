@@ -27,15 +27,15 @@ public class QuickSort {
 		// randomly find the pivot element
 		int pivotElement = arr[high];
 		// move elements smaller to pivot to its left and larger to its right
-		int j = low - 1	;
+		int j = low;
 		for (int i = low; i < high; i++) {
 			if (arr[i] <= pivotElement) {
-				j++;
 				swap(arr, i, j);
+				j++;
 			}
 		}
-		swap(arr, j + 1, high);
-		return j + 1;
+		swap(arr, j, high);
+		return j;
 	}
 
 	private static void swap(int[] arr, int i, int j) {

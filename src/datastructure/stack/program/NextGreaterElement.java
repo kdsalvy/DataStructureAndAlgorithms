@@ -12,7 +12,7 @@ import datastructure.stack.Stack;
  * -1.<br/>
  * b) For an array which is sorted in decreasing order, all elements have next
  * greater element as -1.<br/>
- * c) For the input array [4, 5, 2, 25}, the next greater elements for each
+ * c) For the input array [4, 5, 2, 25], the next greater elements for each
  * element are as follows.<br/>
  * <br/>
  * Element NGE<br/>
@@ -27,7 +27,7 @@ import datastructure.stack.Stack;
 public class NextGreaterElement {
 
 	public static void main(String[] args) throws Exception {
-		int[] arr = { 4, 5, 2, 13 };
+		int[] arr = { 4, 5, 2, 13, 6, 8, 9, 1};
 		Stack<Integer> processStack = new Stack<>();
 		for (int i : arr) {
 			while (processStack.peek() != null && processStack.peek() < i) {

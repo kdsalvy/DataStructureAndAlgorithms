@@ -25,7 +25,6 @@ public class NthNodeFromEnd {
 		Iterator<Integer> intListIterator = intList.iterator();
 		getNthNodeFromEnd(intListIterator, n);
 		System.out.println(data);
-		Collections.reverse(intList);
 	}
 
 	/**
