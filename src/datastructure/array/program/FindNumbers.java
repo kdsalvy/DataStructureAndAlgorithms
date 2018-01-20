@@ -32,7 +32,7 @@ public class FindNumbers {
 
 	// get the right most set bit of the resultant number
 	int rBitNo = xor & ~(xor - 1);
-	System.out.println(rBitNo);
+	// System.out.println(rBitNo);
 
 	// based on the right most set bit divide the numbers into two parts and
 	// thus get the number required

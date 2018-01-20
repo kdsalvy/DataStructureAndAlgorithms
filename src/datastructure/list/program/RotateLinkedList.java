@@ -15,38 +15,38 @@ import datastructure.list.SinglyLinkedList;
  */
 public class RotateLinkedList {
 
-	public static void main(String[] args) {
-		SinglyLinkedList sll = new SinglyLinkedList();
-		for (int i = 1; i <= 15; i++)
-			sll.add(i);
+    public static void main(String[] args) {
+	SinglyLinkedList sll = new SinglyLinkedList();
+	for (int i = 1; i <= 15; i++)
+	    sll.add(i);
 
-		int k = 4;
-		rotate(k, sll);
-		System.out.println(sll);
-	}
+	int k = 4;
+	rotate(k, sll);
+	System.out.println(sll);
+    }
 
-	private static void rotate(int k, SinglyLinkedList sll) {
-		Node node = sll.head;
-		int count = 1;
-		// traverse to kth node
-		while (count < k && node != null) {
-			node = node.next;
-			count++;
-		}
-		// if node is null then return as solution cannot be reached
-		if (node == null)
-			return;
-		// store the pointer to kth node
-		Node kthNode = node;
-		// traverse to last node;
-		while (node.next != null)
-			node = node.next;
-		// attach last node to head
-		node.next = sll.head;
-		// make k+1 th node as head
-		sll.head = kthNode.next;
-		// make k + 1th node as null
-		kthNode.next = null;
+    private static void rotate(int k, SinglyLinkedList sll) {
+	Node node = sll.head;
+	int count = 1;
+	// traverse to kth node
+	while (count < k && node != null) {
+	    node = node.next;
+	    count++;
 	}
+	// if node is null then return as solution cannot be reached
+	if (node == null)
+	    return;
+	// store the pointer to kth node
+	Node kthNode = node;
+	// traverse to last node;
+	while (node.next != null)
+	    node = node.next;
+	// attach last node to head
+	node.next = sll.head;
+	// make k+1 th node as head
+	sll.head = kthNode.next;
+	// make k + 1th node as null
+	kthNode.next = null;
+    }
 
 }

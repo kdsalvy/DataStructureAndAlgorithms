@@ -16,8 +16,8 @@ public class LinkedListFlattening {
 	static class LinkedList{
 		Node head;
 	}
-	
-	static class Node{
+
+    static class Node {
 		Node right;
 		Node down;
 		int data;

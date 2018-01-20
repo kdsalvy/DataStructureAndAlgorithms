@@ -22,14 +22,14 @@ public class AddNumbersRepresentedByLinkedList {
 	System.out.println(result);
     }
 
-    private Node reverseLinkedList(Node head) {
-	if (head.next == null) {
-	    return head;
+    private Node reverseLinkedList(Node node) {
+	if (node.next == null) {
+	    return node;
 	}
-	Node result = reverseLinkedList(head.next);
-	Node temp = head.next;
-	temp.next = head;
-	head.next = null;
+	Node result = reverseLinkedList(node.next);
+	Node temp = node.next;
+	temp.next = node;
+	node.next = null;
 
 	return result;
 

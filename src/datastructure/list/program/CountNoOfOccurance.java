@@ -14,47 +14,47 @@ import java.util.List;
  */
 public class CountNoOfOccurance {
 
-	public static void main(String[] args) {
-		List<Integer> intList = getLinkedList();
-		Iterator<Integer> iterator = intList.iterator();
-		int n = 1;
-		int noOfOccurance = 0;
-		while (iterator.hasNext()) {
-			if (iterator.next() == n)
-				noOfOccurance++;
-		}
-		System.out.println(noOfOccurance);
+    public static void main(String[] args) {
+	List<Integer> intList = getLinkedList();
+	Iterator<Integer> iterator = intList.iterator();
+	int n = 1;
+	int noOfOccurance = 0;
+	while (iterator.hasNext()) {
+	    if (iterator.next() == n)
+		noOfOccurance++;
 	}
+	System.out.println(noOfOccurance);
+    }
 
-	/**
-	 * Return a pre-constructed list to perform on.
-	 * 
-	 * @return List
-	 */
-	private static List<Integer> getLinkedList() {
-		List<Integer> intList = new LinkedList<Integer>();
-		intList.add(4);
-		intList.add(8);
-		intList.add(1);
-		intList.add(9);
-		intList.add(5);
-		intList.add(1);
-		intList.add(12);
-		intList.add(10);
-		intList.add(3);
-		intList.add(1);
-		intList.add(11);
-		intList.add(4);
-		intList.add(8);
-		intList.add(1);
-		intList.add(9);
-		intList.add(5);
-		intList.add(1);
-		intList.add(12);
-		intList.add(10);
-		intList.add(3);
-		intList.add(1);
-		intList.add(11);
-		return intList;
-	}
+    /**
+     * Return a pre-constructed list to perform on.
+     * 
+     * @return List
+     */
+    private static List<Integer> getLinkedList() {
+	List<Integer> intList = new LinkedList<Integer>();
+	intList.add(4);
+	intList.add(8);
+	intList.add(1);
+	intList.add(9);
+	intList.add(5);
+	intList.add(1);
+	intList.add(12);
+	intList.add(10);
+	intList.add(3);
+	intList.add(1);
+	intList.add(11);
+	intList.add(4);
+	intList.add(8);
+	intList.add(1);
+	intList.add(9);
+	intList.add(5);
+	intList.add(1);
+	intList.add(12);
+	intList.add(10);
+	intList.add(3);
+	intList.add(1);
+	intList.add(11);
+	return intList;
+    }
 }

@@ -56,13 +56,16 @@ public class HeapSort {
 	// if largest is anything but the root node then swap the largest and
 	// the root node
 	if (largest != i) {
-	    int temp = nonHeapArray[i];
-	    nonHeapArray[i] = nonHeapArray[largest];
-	    nonHeapArray[largest] = temp;
-
+	    swap(nonHeapArray, i, largest);
 	    maxHeapify(nonHeapArray, n, largest);
 	}
 
+    }
+
+    private static void swap(int[] nonHeapArray, int i, int largest) {
+	int temp = nonHeapArray[i];
+	nonHeapArray[i] = nonHeapArray[largest];
+	nonHeapArray[largest] = temp;
     }
 
 }
