@@ -52,7 +52,8 @@ Stack
 8.	NextGreaterElement			
 9.	StackRecursiveSort			
 10.	StackReverseUsingRecursion	
-11.	StockSpanProblem	
+11.	StockSpanProblem
+12. MaxRectangularAreaInAHistogram
 
 Tree
 1.	BSTInsert
@@ -69,3 +70,7 @@ Tree
 
 Trie
 LRUCache
+
+Graph
+1. Topological Sorting of a directed graph
+2. Dijkstra's Single source shortest path algorithm
