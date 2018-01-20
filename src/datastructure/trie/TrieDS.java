@@ -42,6 +42,7 @@ public class TrieDS {
 	insertHelper(word, i + 1, next);
     }
 
+    
     public boolean search(String word) {
 	TrieNode temp = root;
 	return searchHelper(word, 0, temp);
