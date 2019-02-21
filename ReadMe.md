@@ -69,13 +69,15 @@ Stack
 
 Tree
 ---------------------------------
+- BalancedBSTUsingSortedArray
 - BSTInsert
 - BSTSerializationDeserialization
 - ConnectNodesAtSameLevel		
 - ExpressionTree				
 - HeightOfTree				
 - HuffmanDecode
-- LeastCommonAncestor			
+- LeastCommonAncestorBST
+- LeastCommonAncestorBT			
 - SwapNodes
 - TreeDiameter				
 - TreeTraversal				

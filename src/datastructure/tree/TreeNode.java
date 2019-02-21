@@ -15,28 +15,28 @@ package datastructure.tree;
  *
  */
 public class TreeNode<T> {
-	public TreeNode<T> left;
-	public TreeNode<T> right;
-	public T data;
+    public TreeNode<T> left;
+    public TreeNode<T> right;
+    public T data;
 
-	public TreeNode() {
-	}
+    public TreeNode() {
+    }
 
-	public TreeNode(T data) {
-		this.data = data;
-		left = null;
-		right = null;
-	}
+    public TreeNode(T data) {
+        this.data = data;
+        left = null;
+        right = null;
+    }
 
-	public TreeNode(T data, TreeNode<T> left, TreeNode<T> right) {
-		this(data);
-		this.left = left;
-		this.right = right;
-	}
+    public TreeNode(T data, TreeNode<T> left, TreeNode<T> right) {
+        this(data);
+        this.left = left;
+        this.right = right;
+    }
 
-	@Override
-	public String toString() {
-		return "TreeNode [left=" + left + ", right=" + right + ", data=" + data + "]";
-	}
+    @Override
+    public String toString() {
+        return "TreeNode [left=" + left + " ] " + " data= " + data + "[ right= " + right + " ]";
+    }
 
 }
