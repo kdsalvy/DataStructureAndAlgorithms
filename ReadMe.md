@@ -25,6 +25,9 @@ Search
 - JumpSearch
 - LinearSearch
 
+##String
+- LongestPalindromeSubstring (Mancher's Algorithm)
+
 Array
 -------------------------------
 - FindNumbers
@@ -33,6 +36,7 @@ Array
 - MaximumIndex	
 - SubarraySum
 - TripletsWithSumZero
+- PeakElementInArray
 
 Heap
 -------------------------------
