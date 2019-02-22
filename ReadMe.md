@@ -25,7 +25,8 @@ Search
 - JumpSearch
 - LinearSearch
 
-##String
+## String
+-------------------------------
 - LongestPalindromeSubstring (Mancher's Algorithm)
 
 Array
