@@ -25,7 +25,8 @@ Search
 - JumpSearch
 - LinearSearch
 
-## String
+String
+-------------------------------
 - LongestPalindromeSubstring (Mancher's Algorithm)
 
 Array
@@ -52,6 +53,7 @@ List
 - NthNodeFromEnd 
 - RecursiveReverseLinkedList
 - RotateLinkedList
+- CloneLinkedListWithExtraRandomPointer
 
 Matrix
 ---------------------------------
@@ -77,9 +79,10 @@ Tree
 - BSTInsert
 - BSTSerializationDeserialization
 - ConnectNodesAtSameLevel		
-- ExpressionTree				
+- ExpressionTree #Incomplete			
 - HeightOfTree				
 - HuffmanDecode
+- KittyExpression #Incomplete
 - LeastCommonAncestorBST
 - LeastCommonAncestorBT			
 - SwapNodes
@@ -97,3 +100,36 @@ Graph
 ------------------------------------
 - Topological Sorting of a directed graph
 - Dijkstra's Single source shortest path algorithm
+
+Dynamic programming
+------------------------------------
+- BuyNSellStocks
+- CoinChangeProblem
+- EggBreakProblem
+- HouseRobber
+- LongestCommonSubsequence
+- LongestCommonSubstring
+- MaximizeProfitForCuttingRod
+- MinimumOperations
+- ShopInCandyStore
+- StairCaseProblem
+- UglyNumbers
+- ZeroOneKnapsack
+
+Sort
+------------------------------------
+- BSTSort
+- BubbleSort
+- CountingSort
+- HeapSort
+- InsertionSort
+- MergeSort
+- QuickSort
+- RadixSort
+- SelectionSort
+
+Sort Variations
+------------------------------------
+FindMedianUsingQuickSortPivot
+SortBigInt
+SortStringArrayUsingCountingSort
