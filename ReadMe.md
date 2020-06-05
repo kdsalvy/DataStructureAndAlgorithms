@@ -1,4 +1,4 @@
-# Data Structure and Algorithms attempted till date
+# Data Structure and Algorithms - Practice problems & solutions
 
 Backtracking
 -----------------------------
