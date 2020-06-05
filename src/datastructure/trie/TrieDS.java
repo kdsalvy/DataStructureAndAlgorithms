@@ -30,7 +30,7 @@ public class TrieDS {
 	if (i >= word.length()) {
 	    return;
 	}
-	boolean eow = i == word.length() - 1 ? true : false;
+	boolean eow = i == word.length() - 1;
 	char c = word.charAt(i);
 	TrieNode next = null;
 	if (temp.child.containsKey(c))

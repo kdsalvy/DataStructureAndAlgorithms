@@ -1,10 +1,19 @@
 package datastructure.list;
 
+/**
+ * Singly Linked List with basic insert, delete & display operations
+ * @author saukedia1
+ *
+ */
 public class SinglyLinkedList {
 
 	public Node head = null;
 	public int size = 0;
 
+	/**
+	 * Inserts data to the end of the list
+	 * @param data
+	 */
 	public void add(int data) {
 		Node current = head;
 		if (current == null) {
@@ -19,6 +28,10 @@ public class SinglyLinkedList {
 		size++;
 	}
 
+	/**
+	 * Inserts data at the start of the list
+	 * @param data
+	 */
 	public void insertAtFirst(int data) {
 		Node temp = new Node(data);
 		temp.next = head;
@@ -26,6 +39,12 @@ public class SinglyLinkedList {
 		size++;
 	}
 
+	/** 
+	 * Inserts data at the given index in the list
+	 * @param data - Data to be inserted
+	 * @param index - Index where data needs to be inserted
+	 * @throws Exception
+	 */
 	public void insertAt(int data, int index) throws Exception {
 		Node current = head;
 		Node prev = null;
@@ -41,25 +60,44 @@ public class SinglyLinkedList {
 		size++;
 	}
 
-	public void deleteLast() throws Exception {
+	/**
+	 * Deletes the last element of the List & returns the deleted element
+	 * @throws Exception
+	 */
+	public Node deleteLast() throws Exception {
+	        Node result = null;
 		Node current = head;
 		if (current == null)
 			throw new Exception("Empty List");
 		while (current.next.next != null)
 			current = current.next;
+		result = current.next;
 		current.next = null;
 		size--;
+		return result;
 	}
 
-	public void deleteFirst() throws Exception {
+	/**
+	 * Delete the first Element of the List & returns the deleted element
+	 * @throws Exception
+	 */
+	public Node deleteFirst() throws Exception {
+	        Node result = null;
 		Node current = head;
 		if (current == null)
 			throw new Exception("Empty List");
 		head = current.next;
+		result = current;
 		current = null;
 		size--;
+		return result;
 	}
 
+	/**
+	 * Delete the element at given index in the list
+	 * @param index
+	 * @throws Exception
+	 */
 	public void deleteAt(int index) throws Exception {
 		Node current = head;
 		Node prev = null;

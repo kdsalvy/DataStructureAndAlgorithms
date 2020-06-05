@@ -77,7 +77,7 @@ public class KStacksInSingleArray {
 	// find the top pointer
 	int curTop = top[stackIndex];
 	if (curTop == -1) {
-	    System.out.println("Stack is empty");
+	    System.out.printf("Stack %d is empty: ", stackIndex);
 	    return -1;
 	}
 	// get the element

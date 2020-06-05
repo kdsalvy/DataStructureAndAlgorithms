@@ -21,6 +21,8 @@ public class HeapSort {
 	for (int i = startIndex; i >= 0; i--) {
 	    maxHeapify(randomArray, n, i);
 	}
+	
+	System.out.println(Arrays.toString(randomArray));
 
 	// one by one extract the max element from group
 	for (int i = n - 1; i >= 0; i--) {

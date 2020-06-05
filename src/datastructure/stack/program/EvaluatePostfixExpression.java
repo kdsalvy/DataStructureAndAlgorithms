@@ -4,38 +4,44 @@ import datastructure.stack.Stack;
 
 public class EvaluatePostfixExpression {
 
-	public static void main(String[] args) throws Exception {
-		String expression = "2 3 1 * + 9 -";
-		Stack<Integer> operandStack = new Stack<>();
-		char[] charArray = expression.toCharArray();
+    public static void main(String[] args) throws Exception {
+        String expression = "2 3 1 * + 9 -";
+        Integer result = evaluateExpression(expression);
+        System.out.println(result);
+    }
 
-		for (Character c : charArray) {
-			if (Character.isDigit(c)) {
-				operandStack.push(Character.getNumericValue(c));
-				continue;
-			}
+    private static Integer evaluateExpression(String expression) throws Exception {
+        Stack<Integer> operandStack = new Stack<>();
+        char[] charArray = expression.toCharArray();
 
-			if (c == ' ')
-				continue;
+        for (Character c : charArray) {
+            if (Character.isDigit(c)) {
+                operandStack.push(Character.getNumericValue(c));
+                continue;
+            }
 
-			operandStack.push(calculate(c, operandStack.pop(), operandStack.pop()));
-		}
-		
-		System.out.println(operandStack.pop());
-	}
+            if (c == ' ')
+                continue;
 
-	private static int calculate(char op, int op1, int op2) throws Exception {
-		switch (op) {
-		case '+':
-			return op2 + op1;
-		case '-':
-			return op2 - op1;
-		case '*':
-			return op2 * op1;
-		case '/':
-			return op2 / op1;
-		default:
-			throw new Exception("Invalid operator");
-		}
-	}
+            operandStack.push(calculate(c, operandStack.pop(), operandStack.pop()));
+        }
+
+        Integer result = operandStack.pop();
+        return result;
+    }
+
+    private static int calculate(char op, int op1, int op2) throws Exception {
+        switch (op) {
+        case '+':
+            return op2 + op1;
+        case '-':
+            return op2 - op1;
+        case '*':
+            return op2 * op1;
+        case '/':
+            return op2 / op1;
+        default:
+            throw new Exception("Invalid operator");
+        }
+    }
 }

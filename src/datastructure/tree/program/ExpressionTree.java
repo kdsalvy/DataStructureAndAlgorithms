@@ -4,40 +4,38 @@ import java.util.Stack;
 
 import datastructure.tree.TreeNode;
 
-public class ExpressionTree {/*
+public class ExpressionTree {
 
-	public static void main(String[] args) {
-		String expression = "a+b";
-		char[] oprArray = expression.toCharArray();
-		TreeNode<Character> exprTreeRoot = constructExprTree(oprArray);
+    public static void main(String[] args) {
+        String expression = "a+b";
+        char[] oprArray = expression.toCharArray();
+        TreeNode<Character> exprTreeRoot = constructExprTree(oprArray);
 
-	}
+    }
 
-	private static TreeNode<Character> constructExprTree(char[] oprArray) {
-		Stack<Character> oprtr = new Stack<>();
-		Stack<Character> oprnd = new Stack<>();
-		TreeNode<Character> node = null;
+    private static TreeNode<Character> constructExprTree(char[] oprArray) {
+        Stack<TreeNode<Character>> oprtr = new Stack<>();
+        Stack<TreeNode<Character>> oprnd = new Stack<>();
+        TreeNode<Character> node = null;
 
-		for (Character c : oprArray) {
-			if (c == ' ')
-				continue;
-			if (Character.isDigit(c)) {
-				oprnd.push(c);
-			} else if (c == '(')
-				oprtr.push(c);
-			while (c == ')' && oprtr.peek() != '(') {
-				TreeNode<Character> tempNode = new TreeNode<>(oprtr.pop());
-				tempNode.right = new TreeNode<>(oprnd.pop());
-				tempNode.right = new TreeNode<>(oprnd.pop());
-				if (node == null) {
-					node = tempNode;
-				} else {
-					
-				}
+        for (Character c : oprArray) {
+            if (c == ' ')
+                continue;
+            if (Character.isDigit(c) || c == '(') {
+                oprnd.push(new TreeNode<>(c));
+                continue;
+            }
 
-			}
+            while (c == ')' && oprtr.peek().data != '(') {
+                TreeNode<Character> tempNode = oprtr.pop();
+                tempNode.right = oprnd.pop();
+                tempNode.left = oprnd.pop();
+                if(node == null) {
+                    node = tempNode;
+                }
+            }
 
-		}
-	}
+        }
+    }
 
-*/}
+}

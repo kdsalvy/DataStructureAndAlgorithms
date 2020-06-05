@@ -19,35 +19,52 @@ import java.util.Stack;
  */
 public class MaxRectangualrAreaInAHistogram {
 
-	public static void main(String[] args) {
-		int[] histogram = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-		Stack<Integer> stack = new Stack<>();
+    public static void main(String[] args) {
+        int[] histogram = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-		int i = 0;
-		int maxArea = Integer.MIN_VALUE;
-		while (i < histogram.length) {
-			if (stack.isEmpty() || histogram[i] > histogram[stack.peek()])
-				stack.push(i++);
-			else if (histogram[i] < histogram[stack.peek()]) {
-				int tmpArea = computeArea(i, stack, histogram);
-				maxArea = Math.max(maxArea, tmpArea);
-			}
-		}
+        int maxArea = findArea(histogram);
+        System.out.println(maxArea);
+    }
 
-		while (!stack.isEmpty()) {
-			int tmpArea = computeArea(i, stack, histogram);
-			maxArea = Math.max(maxArea, tmpArea);
-		}
-		System.out.println(maxArea);
-	}
+    private static int findArea(int[] histogram) {
+        Stack<Integer> stack = new Stack<>();
+        int i = 0;
+        int maxArea = Integer.MIN_VALUE;
+        while (i < histogram.length) {
+            // push to stack if the stack is empty or the current histogram bar is bigger
+            // than the current top
+            if (stack.isEmpty() || histogram[i] > histogram[stack.peek()])
+                stack.push(i++);
+            // if the current histogram bar is smaller than current stack top then pop until
+            // we get a smaller value on stack top or stack is empty. For each pop compute the area
+            // compare with max Area and keep the max value
+            else if (histogram[i] < histogram[stack.peek()]) {
+                int tmpArea = computeArea(i, stack, histogram);
+                maxArea = Math.max(maxArea, tmpArea);
+            }
+        }
 
-	public static int computeArea(int i, Stack<Integer> stack, int[] histogram) {
-		int top = stack.pop();
-		if (stack.isEmpty()) {
-			return histogram[top] * i;
-		} else {
-			return histogram[top] * (i - stack.peek() - 1);
-		}
-	}
+        // empty the remaining values in stack and compute the area for each pop. Compare with
+        // max area and keep the largest value
+        while (!stack.isEmpty()) {
+            int tmpArea = computeArea(i, stack, histogram);
+            maxArea = Math.max(maxArea, tmpArea);
+        }
+        return maxArea;
+    }
+
+    public static int computeArea(int i, Stack<Integer> stack, int[] histogram) {
+        int top = stack.pop();
+        if (stack.isEmpty()) {
+            // if stack is empty that means everything from top till i at lease have same height
+            // as histogram[top]
+            return histogram[top] * i;
+        } else {
+            // Since we are sure that the top to i is having at least the same height as histogram[top]
+            // we can compute the area (i - top - 1) * histogram[top] as the stack top now contains the
+            // index above which the height was same.
+            return histogram[top] * (i - stack.peek() - 1);
+        }
+    }
 
 }

@@ -2,7 +2,7 @@ package datastructure.array.program;
 
 /**
  * You are given an array A containing 2*N+2 positive numbers, out of which N
- * numbers are repeated exactly once and the other two numbers occur exactly
+ * numbers are repeated exactly twice and the other two numbers occur exactly
  * once and are distinct. You need to find the other two numbers and print them
  * in ascending order.<br/>
  * 

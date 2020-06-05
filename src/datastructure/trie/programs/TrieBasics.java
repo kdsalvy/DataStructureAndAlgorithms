@@ -9,6 +9,7 @@ public class TrieBasics {
 	trie.insertWord("saurabh");
 	trie.insertWord("sandy");
 
+	System.out.println(trie);
 	System.out.println(trie.search("sandy"));
 
     }
