@@ -130,6 +130,6 @@ Sort
 
 Sort Variations
 ------------------------------------
-FindMedianUsingQuickSortPivot
-SortBigInt
-SortStringArrayUsingCountingSort
+- FindMedianUsingQuickSortPivot
+- SortBigInt
+- SortStringArrayUsingCountingSort
